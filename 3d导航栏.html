@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        width: 560px;
+        margin: 100px auto;
+      }
+      ul li {
+        width: 130px;
+        height: 50px;
+        list-style: none;
+        /* perspective: 200px; */
+        float: left;
+        margin-right: 10px;
+      }
+      ul li:hover .box {
+        transform: rotateX(90deg);
+      }
+      .box {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: all 0.7s;
+      }
+
+      .front,
+      .bottom {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+      }
+      .front {
+        background-color: pink;
+        z-index: 1;
+        transform: translateZ(25px);
+      }
+      .bottom {
+        background-color: red;
+        transform: translateY(25px) rotateX(-90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div class="box">
+          <div class="front">大家好</div>
+          <div class="bottom">你是谁</div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="front">大家好</div>
+          <div class="bottom">你是谁</div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="front">大家好</div>
+          <div class="bottom">你是谁</div>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <div class="front">大家好</div>
+          <div class="bottom">你是谁</div>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>
